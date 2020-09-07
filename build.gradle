@@ -52,6 +52,8 @@ test {
 	useJUnitPlatform()
 }
 
+build.dependsOn spotlessApply
+
 spotless {
 	java {
 		indentWithTabs(4)
