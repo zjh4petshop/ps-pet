@@ -19,27 +19,28 @@ import com.zjh.pspet.repository.PetRepository;
 @RequestMapping("/pet")
 public class PetController {
 
-  @Autowired private PetRepository petRepository;
+	@Autowired
+	private PetRepository petRepository;
 
-  @PostMapping("/")
-  public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
-    Pet newPet = petRepository.save(pet);
-    return ResponseEntity.ok(newPet);
-  }
+	@PostMapping("/")
+	public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
+		Pet newPet = petRepository.save(pet);
+		return ResponseEntity.ok(newPet);
+	}
 
-  @GetMapping("/{id}")
-  public ResponseEntity<Pet> getPetById(@PathVariable String id) {
-    Optional<Pet> optionalPet = petRepository.findById(id);
-    if (optionalPet.isPresent()) {
-      return ResponseEntity.ok(optionalPet.get());
-    } else {
-      return ResponseEntity.notFound().build();
-    }
-  }
+	@GetMapping("/{id}")
+	public ResponseEntity<Pet> getPetById(@PathVariable String id) {
+		Optional<Pet> optionalPet = petRepository.findById(id);
+		if (optionalPet.isPresent()) {
+			return ResponseEntity.ok(optionalPet.get());
+		} else {
+			return ResponseEntity.notFound().build();
+		}
+	}
 
-  @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deletePetById(@PathVariable String id) {
-    petRepository.deleteById(id);
-    return ResponseEntity.ok().build();
-  }
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> deletePetById(@PathVariable String id) {
+		petRepository.deleteById(id);
+		return ResponseEntity.ok().build();
+	}
 }

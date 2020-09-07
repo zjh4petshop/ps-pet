@@ -8,5 +8,5 @@ import lombok.Data;
 @Data
 public class Category extends BaseEntity {
 
-  private String name;
+	private String name;
 }

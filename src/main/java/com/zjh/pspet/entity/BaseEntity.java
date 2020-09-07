@@ -13,9 +13,14 @@ import lombok.Data;
 @Data
 public class BaseEntity {
 
-  @Id private String id;
-  @CreatedBy private String createdBy;
-  @LastModifiedBy private String modifiedBy;
-  @CreatedDate private Date createdDate;
-  @LastModifiedDate private Date modifiedDate;
+	@Id
+	private String id;
+	@CreatedBy
+	private String createdBy;
+	@LastModifiedBy
+	private String modifiedBy;
+	@CreatedDate
+	private Date createdDate;
+	@LastModifiedDate
+	private Date modifiedDate;
 }

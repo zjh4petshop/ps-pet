@@ -55,7 +55,7 @@ test {
 spotless {
 	java {
 		indentWithTabs(4)
-		googleJavaFormat()
+		eclipse()
 		removeUnusedImports()
 		trimTrailingWhitespace()
 		endWithNewline()

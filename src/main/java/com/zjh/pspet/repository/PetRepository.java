@@ -11,6 +11,6 @@ import com.zjh.pspet.enums.Status;
 @Repository
 public interface PetRepository extends MongoRepository<Pet, String> {
 
-  //    @Query()
-  List<Pet> getPetsByStatus(Status status);
+	// @Query()
+	List<Pet> getPetsByStatus(Status status);
 }

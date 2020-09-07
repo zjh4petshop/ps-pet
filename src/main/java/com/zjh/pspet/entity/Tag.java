@@ -7,5 +7,5 @@ import lombok.Data;
 @Data
 public class Tag extends BaseEntity {
 
-  private String name;
+	private String name;
 }
